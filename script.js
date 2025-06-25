@@ -25,10 +25,11 @@ function loadPref(key, fallback = "") {
 
 async function loadAllStreamsJson() {
   try {
-    const res = await fetch("data.json");
+    const timestamp = new Date().getTime();
+    const res = await fetch(`data.json?ts=${timestamp}`);
     allLanguageData = await res.json();
   } catch (err) {
-    console.error("データの読み込み失敗", err);
+    console.error("err(1)", err);
   }
 }
 
