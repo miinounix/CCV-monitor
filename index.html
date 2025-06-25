@@ -1,0 +1,40 @@
+<!-- 
+  This site uses D3.js (https://d3js.org/) 
+  Copyright © 2011-2025 Mike Bostock
+  Licensed under BSD-3-Clause License
+-->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>do-setu monitor</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <select id="language-filter">
+    <option value="all">all</option>
+  </select>
+
+  <select id="rank-select">
+    <option value="1-20">Top 20</option>
+    <option value="21-100">21–100</option>
+    <option value="101-200">101–200</option>
+    <option value="201-300">201–300</option>
+    <option value="301-400">301–400</option>
+    <option value="401-500">401–500</option>
+    <option value="501-1000">501–1000</option>
+    <option value="1001-99999">1001+</option>
+  </select>
+
+  <input type="text" id="game-search" placeholder="Search game..." list="game-list" />
+  <datalist id="game-list"></datalist>
+
+  <button id="reset-btn" type="button">reset</button>
+
+  <div id="treemap"></div>
+</body>
+</html>

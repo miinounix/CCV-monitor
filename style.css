@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  background: #111;
+  font-family: sans-serif;
+}
+
+input[type="text"],
+select,
+button {
+  font-size: 14px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #222;
+  color: #fff;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  margin: 1px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+}
+
+input[type="text"]:hover,
+select:hover,
+button:hover {
+  background-color: #333;
+}
+
+input[type="text"]:focus,
+select:focus {
+  box-shadow: 0 0 0 2px #07c;
+}
+
+button:active {
+  background-color: #059;
+}
+
+#treemap {
+  width: 100vw;
+  height: 95vh;
+  position: relative;
+}
+
+.tile {
+  position: absolute;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.tile img {
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.tile img:hover {
+  opacity: 1;
+}
+
+.tile .label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 4px;
+  background: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  pointer-events: none;
+}
